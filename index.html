@@ -7,7 +7,9 @@
 <style>
     /* --- Fonts & General Styles --- */
     body {
-        font-family: 'Georgia', serif;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                 Helvetica, Arial, sans-serif, "Apple Color Emoji",
+                 "Segoe UI Emoji";
         color: #333;
         margin: 0;
         padding: 0;
@@ -35,24 +37,42 @@
     /* --- Header --- */
     header {
         text-align: center;
-        padding: 40px 20px 20px 20px;
-        background: #FFFFFF;
-        border-bottom: 5px solid #1A3D7C;
+        padding: 20px 20px;
+        background-color: #FFFFFF;
+        border: 5px solid #1A3D7C;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         border-radius: 12px;
+
+        /* Two margin areas: left strip and right strip */
+        background-image: 
+            url("flake.jpg"),   /* left border pattern */
+            url("flake.jpg");   /* right border pattern */
+
+        background-repeat: repeat-y, repeat-y;
+
+        /* Left side: 40px wide strip, Right side: 40px */
+        background-size: 120px auto, 120px auto;
+
+        background-position: left top, right top;
     }
+    
 
     header h1 {
-        font-family: 'Palatino Linotype', serif;
-        font-size: 2.8em;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                 Helvetica, Arial, sans-serif;
+        font-size: 2.4em;
         color: #1A3D7C;
         margin-bottom: 10px;
         text-shadow: 1px 1px 2px #C0C0C0;
+        padding-left: 120px;
+        padding-right: 120px;
     }
 
     header p {
         font-size: 1.2em;
         color: #606060; /* silver accent for subtitle */
+        padding-left: 120px;
+        padding-right: 120px;
     }
 
     /* --- Sections --- */
@@ -66,9 +86,10 @@
     }
 
     section h2 {
-        font-family: 'Palatino Linotype', serif;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                 Helvetica, Arial, sans-serif;
         color: #1A3D7C;
-        font-size: 1.9em;
+        font-size: 1.7em;
         border-bottom: 2px solid #C0C0C0;
         padding-bottom: 5px;
         margin-bottom: 15px;
